@@ -1,0 +1,47 @@
+spring:
+  application:
+    name: "springbootTest"
+  # 数据源配置
+  datasource:
+    # 数据库驱动
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    # 数据库连接URL
+    url: jdbc:mysql://localhost:3306/springboot?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
+    # 用户名
+    username: root
+    # 密码
+    password: Apple@939308
+
+    # Druid 连接池配置
+    druid:
+      # 初始连接数
+      initial-size: 5
+      # 最小空闲连接数
+      min-idle: 5
+      # 最大活跃连接数
+      max-active: 20
+      # 获取连接超时时间（毫秒）
+      max-wait: 60000
+      # 连接有效性检查SQL
+      validation-query: SELECT 1
+      # 空闲时检查连接有效性
+      test-while-idle: true
+      # 获取连接时检查有效性
+      test-on-borrow: true
+      # 归还连接时检查有效性
+      test-on-return: false
+
+# 服务器配置
+server:
+  port: 8080
+  servlet:
+    context-path: /app
+
+
+file:
+  # 本地图片存储根目录（绝对路径）
+  upload-path: E:/qing_images/
+  # 访问图片的URL前缀（前端请求路径）
+  access-prefix: /base/
+
+
