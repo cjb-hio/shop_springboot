@@ -105,6 +105,20 @@
             <optional>true</optional>
         </dependency>
 
+        <!--验证码库-->
+        <!-- EasyCaptcha 核心依赖 -->
+        <dependency>
+            <groupId>com.github.whvcse</groupId>
+            <artifactId>easy-captcha</artifactId>
+            <version>1.6.2</version> <!-- 优先使用稳定最新版 -->
+        </dependency>
+
+
+        <!-- Redis Starter -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>
     </dependencies>
 
     <build>

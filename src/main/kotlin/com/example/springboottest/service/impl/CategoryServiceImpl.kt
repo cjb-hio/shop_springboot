@@ -1,6 +1,5 @@
 package com.example.springboottest.service.impl
 
-import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper
 import com.baomidou.mybatisplus.extension.kotlin.KtQueryWrapper
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl
 import com.example.springboottest.entity.Category
@@ -20,6 +19,14 @@ class CategoryServiceImpl : ServiceImpl<CategoryMapper, Category>(), ICategorySe
         val selectList = list(ktQueryWrapper)
         selectList.forEach {
             it.pic = requestDomainPrefix + it.pic
+        }
+        return selectList
+    }
+
+    override fun listTypeList(prefix: String): List<Category> {
+        val selectList = list()
+        selectList.forEach {
+            it.pic = prefix + it.pic
         }
         return selectList
     }

@@ -6,4 +6,6 @@ import com.example.springboottest.entity.Category
 interface ICategoryService : IService<Category> {
 
     fun listParentCategory(requestDomainPrefix: String = ""): List<Category>
+
+    fun listTypeList(prefix: String): List<Category>
 }
